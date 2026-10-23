@@ -1,53 +1,14 @@
-# Problem Hook & Value Proposition: [StreamLine / RouteLogic / your initiative]
+# Problem Hook & Value Proposition (Module 1)
 
-> **Module 1 · ★ Deliverable 1.** Repo file `01-product-thinking/problem-hook.md` — part of your submission.
-> Do the lab in the **Module 1 · Exercise 2 Guide** (linked from the Module 1 deck), then click **⬇ Download .md** — it saves as this exact file. Commit it here.
-> It becomes the **Problem, Value & Hypothesis** slide of your Module 6 final deck. (Your Module 1 · Exercise 1 discovery map lands in `strategic-map.md`.)
+## Responses
+- **Chosen path, which scenario are you committing to? (StreamLine or RouteLogic, or your own):** Streamline
+- **Strategic crisis, based on the brief, if the company does nothing for 12 months, what happens to its market position?:** If Streamline does nothing for 12 months, the market will continue to shift. Users will continue to churn as they switch to competitors who are more focused on high-quality curated experiences. Essentially, Streamline has a chance to not get caught on their heels and work alongside the market/demand.
+- **Moment of misery, what is the user likely doing outside the product (Google, spreadsheets, a competitor) because your tool isn’t serving them?:** The user is currently forced to subscribe to other competitors in order to get the experience they desire. Eventually leading to churn on Streamline.
+- **Problem hook, summarize the business risk and user pain into one urgent sentence.:** Our most valuable viewers are drowning in 15,000 titles and leaving for services that tell them what’s worth watching, and every one who churns takes our highest lifetime value with them.
+- **Value proposition, based on the proposed initiative (Spotlight or Velocity), what is the new value and why is it urgent to launch now?:** For discovery-driven viewers who feel overwhelmed by a 15,000-title library, Spotlight is a curated cinema space that puts trusted, hand-picked films in front of them, so they spend less time choosing and more time watching. Unlike endless scrolling or algorithmic suggestions, it offers a point of view they can trust. For StreamLine, it retains our most valuable subscribers and turns a library we already own into a reason to stay.
 
-## 1. Chosen scenario
+## Cold-read your own hook
+- **Is the business risk high enough to justify a new initiative, a high-stakes threat, or a minor inconvenience?:** Yes, it’s a high-stakes threat rather than a minor inconvenience. The risk isn’t that users are mildly annoyed; it’s that they’re leaving for competitors who offer the curated experience they want. Churn among long-term, high-value subscribers compounds over time: each one lost takes their future revenue with them, and the market is moving toward curation whether we act or not. Doing nothing for 12 months means falling behind a shift that’s already underway.
+- **Is the moment of misery a systemic problem or just an edge case?:** It looks systemic, though I haven’t validated it with data yet. The problem comes from the product itself: a 15,000-title library with no clear point of view affects anyone who opens the app without a specific title in mind, which describes most casual viewing. That said, I’m basing this on the brief and my own assumptions, so I’ll need user research and usage data to confirm how widespread it actually is.
+- **Does the value proposition actually remove the obstacle you identified, or is it a generic feature?:** It targets the obstacle directly. The obstacle is too much choice and too little trust in recommendations, and Spotlight responds by narrowing the choice to a small set of hand-picked films with a clear point of view. The risk is execution: if the curation feels like just another row of algorithmic picks, it becomes a generic feature. Its value depends on users trusting the curator’s taste, which is an assumption I still need to test.
 
-**Path:** _StreamLine Spotlight (B2C) · RouteLogic Velocity (B2B) · my own initiative_
-
-_One line on why you picked it._
-
-## 2. The strategic crisis
-
-_The big-picture business risk. If the company does nothing for 12 months, what happens to its market position?_
-
-> If we do nothing for 12 months, the company will…
-
-## 3. The moment of misery
-
-_The specific point where the product fails the user, forcing a manual workaround (Google, spreadsheets, group texts, a competitor)._
-
-> The user is currently forced to…
-
-## 4. Problem hook
-
-_One urgent sentence fusing the business risk and the user pain, your pitch for why this is the most important thing to work on right now._
-
-> We must solve [business risk] by addressing [user pain]…
-
-## 5. Value proposition
-
-_Who it's for, the new value, and why it's urgent to launch now._
-
-> For **[who]**, we will **[value]** because **[urgent why]**.
-
-## 6. Cold-read self-review
-
-_Read your hook back as a skeptical stakeholder. If you don't feel the urgency, that's your data._
-
-| Question | Your answer |
-|---|---|
-| Is the business risk high-stakes enough to justify a new initiative? | _____ |
-| Is the moment of misery systemic, or just an edge case? | _____ |
-| Does the value proposition actually remove the obstacle? | _____ |
-
-## 7. Finalized hypothesis _(complete in Module 3)_
-
-> Based on [qual + quant evidence], I believe that [solving X] for [persona] will result in [outcome], as measured by a [X%] change in [success metric]. I will protect [guardrail metric] and make a go/no-go decision after [decision window].
-
-## Link to full artifact
-
-_[link to your Problem Hook Builder export]_
