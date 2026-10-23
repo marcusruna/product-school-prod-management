@@ -1,9 +1,3 @@
-# AI Synthesis — Product Health & Insights Summary
-
-> **Module 2 · Lab 1.** Repo file `02-discovery/ai-synthesis.md` — part of your submission.
-> Do the lab in the **Module 2 · Exercise 1 Guide** (linked from the Module 2 deck), then click **⬇ Download .md** — it saves as this exact file. Commit it here.
-> It feeds the **Research & Competitive Analysis** slide of your Module 6 final deck, alongside `competitive-and-journey.md`.
-
 # AI Synthesis, Product Health & Insights Summary (Module 2)
 
 ## Responses
