@@ -1,5 +1,3 @@
-# Hypothesis & Success Metrics
-
 # Hypothesis & Success Metrics (Module 3)
 
 ## Pre-work · Hypothesis check
