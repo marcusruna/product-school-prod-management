@@ -1,25 +1,36 @@
-# Experimentation Plan
+# Experimentation Plan (Module 5)
 
-> **Module 5 · ★ Deliverable 5.** Repo file `05-experimentation/experimentation-plan.md` — part of your submission.
-> Do the lab in the **Module 5 · Exercise Guide** (linked from the Module 5 deck), then click **⬇ Download .md** — it saves as this exact file. Commit it here.
-> It becomes the **Experimentation Plan** slide of your Module 6 final deck.
+## Get your documents ready
+- **From M3, your hypothesis sentence:** Based on our persona research, which shows long-tenured viewers scrolling for 20 minutes and closing the app without watching, and funnel data showing only 11% of homepage visitors reach a 30+ minute session (down from 19%), I believe that helping viewers quickly find a title they trust enough to start and finish for the Overwhelmed Veteran, a lapsed heavy viewer now behaving like a Wanderer (41% of our base), will result in deeper viewing sessions, a rebuilt watching habit, and lower churn, as measured by a 4-point (≈36%) increase in the share of Wanderer sessions reaching 30+ minutes after engaging with Spotlight (11% → 15%). I will protect Power User engagement (4.8 sessions/week) and churn and will make a go/no-go decision after two more monthly cohorts (March and April) observed through Month 2, requiring at least a 10-point Month 1 retention lift over Full Library cohorts to proceed.
+- **From M3, your primary success metric & guardrail metric:** Primary success metric: Share of Wanderer sessions reaching 30+ minutes after engaging with Spotlight. It’s a leading indicator that moves before churn does. Month 1 retention is the lagging confirmation. Guardrail Metric: Power User sessions/week (currently 4.8×) and churn. Power Users already watch 58% curated content, and Spotlight must not cannibalize or disrupt the segment that already works.
+- **From M4, the feature you scoped in your PRD this is what you're testing:** A1, Spotlight Curated Rail: Hand-picked homepage rail that bypasses the algorithm
 
-## Overview
+## Define your experiment parameters
+- **Feature under test pull from your M4 PRD:** A1, Spotlight Curated Rail: Hand-picked homepage rail that bypasses the algorithm
+- **Persona pull your M2 persona:** The Overwhelmed veteran: a long-tenured, heavy viewer who has been with the platform for over a decade and once saw it as her default evening entertainment.
+- **Expected outcome the behaviour change you expect, from your M3 hypothesis:** Wanderers move from browsing to watching full sessions, which rebuilds their habit (sessions/week up from 1.1×), reduces churn, and protects the lifetime value of a segment that makes up 41% of our base.
+- **Primary success metric the one number that defines success, from M3:** Share of Wanderer sessions reaching 30+ minutes after engaging with Spotlight. It’s a leading indicator that moves before churn does. Month 1 retention is the lagging confirmation.
+- **Baseline rate today's rate of your primary metric, from your M3 data:** Baseline: Wanderer-specific rate not available in M3; proxy is 11% of all mobile sessions reaching 30+ min (last 90 days). Wanderer rate to be pulled before launch.
+- **Guardrail metric & boundary what must not break, and how far it can move before you investigate:** Power User sessions/week (baseline 4.8×). Must stay at or above 4.6×, no more than a 5% drop vs. holdout. If it breaches, Spotlight placement for Power Users is rolled back before any other change. Secondary: Power User churn must not rise vs. holdout.
+- **Minimum Detectable Effect (MDE) the smallest improvement worth shipping, your floor:** +2 percentage points absolute (11% → 13%). This is the smallest lift worth shipping. The PRD target of +8 points is the goal, not the floor: a +2 result means Spotlight works and is worth iterating on, even if it falls short of the target.
+- **Sample size per arm use the calculator in the builder, baseline + MDE:** ~4,150 sessions per arm (baseline 11%, MDE +2 pts, α = 0.05, 80% power).
+- **Traffic split & test duration 50/50 standard · cover ≥ 2 weekly cycles:** 50/50 split, randomized at the user level within each segment (Wanderers and Power Users), so the Power User guardrail can be measured. Primary metric read on Wanderers only. Run 14 days (two weekly cycles), then hold cohorts to Day 30 for Month 1 retention.
+- **Significance threshold p < 0.05 is standard, explain any deviation:** p < 0.05, two-sided, 80% power. No deviation. Only the primary metric decides ship/no-ship; secondary and guardrail metrics inform but don’t override.
 
-_A high-level validation strategy to test your hypothesis before full-scale development._
+## Define your control and variant
+- **Control (A) the current experience, reference your M2 moment of misery and M3 funnel/workflow data:** The current StreamLine home screen with no Spotlight rail: Continue Watching, Trending Now, and Because You Watched… in their existing order. This is the moment of misery: she opens the app, scrolls for about twenty minutes, and closes it without watching, putting on a DVD instead. The catalog’s size has become a reason to give up, and Marcus no longer trusts recommendations (“I’m not a genre, I’m a person”). M3 data: 71% browse, 48% reach a title page, 29% start playing, and only 11% reach a 30+ min session (down from 19%). Wanderers average 1.1 sessions/week, with 61% of viewing from Trending.
+- **Variant (B) your single change, copy the relevant screens & functional requirements from your M4 PRD:** Identical to Control plus one addition, the Spotlight Curated Rail: a fixed, hand-picked rail of 8–10 titles headed “Picked by our editors,” each tile showing poster, title, runtime, genre, and the editor’s one-line reason when one exists. The same list in the same order for every viewer (FR1), capped at 10 with no “See all” (FR2). For Wanderers, it is the first row on Home and fully visible without scrolling (FR3). For Power Users, it sits below Continue Watching and their existing first row. No existing row is removed or reordered. Title detail pages for rail titles show a “From the Spotlight” tag with the editor’s one-liner.
+- **Isolation check, what has NOT changed? list everything identical between arms (app version, recommendation engine, notifications, onboarding). If something changed inadvertently, your test is compromised.:** Identical across both arms: all existing home rows and their order; the recommendation engine and Trending logic; content library; title detail pages for non-rail titles; search; playback; notifications and email; onboarding; pricing and promotions; app version. Users are randomized at the user level within each segment and stay in their arm for the full test.
 
-_____
+## Formalize your hypothesis & shipping criteria
+- **Your hypothesis (filled in):** I believe that the Spotlight Curated Rail (a fixed, editor-picked rail of 8–10 titles at the top of Home) for Wanderers (the Overwhelmed Veteran) will result in them choosing something to watch quickly and staying with it instead of scrolling and giving up, as measured by a +2 percentage point change (11% → 13%, ~18% relative) in the share of Wanderer sessions lasting 30+ minutes within a 14-day test. We will protect Power User sessions/week throughout the test.
+- **Your shipping criteria (filled in):** We will SHIP if the share of Wanderer sessions lasting 30+ minutes improves by ≥ 2 percentage points at p < 0.05 (two-sided, 80% power) and Power User sessions/week does not drop more than 5% vs. holdout (stays at or above 4.6×) after 14 days.
 
-## What you're testing
+We will ITERATE if direction is positive but lift is below 2 points.
 
-| Element | Detail |
-|---|---|
-| Hypothesis under test | _____ |
-| Experiment design (A/B, etc.) | _____ |
-| Primary metric | _____ |
-| Guardrail metric | _____ |
-| Decision rule (ship / kill / pivot) | _____ |
+We will KILL if the primary metric shows no improvement or moves negatively.
 
-## Findings & decision _(after running it)_
+If the Power User guardrail is breached, Spotlight placement for Power Users is rolled back regardless of the Wanderer result.
 
-_____
+The read date is fixed at Day 14; no results are reviewed before this date. Month 1 retention is read at Day 30 as lagging confirmation and does not change the ship decision unless it drops vs. holdout.
+- **Hardest parameter to define, and did it change your hypothesis? quick debrief:** The baseline. I assumed M3 would give me a number, but it only had an all-user rate (11%), not a Wanderer-specific one. Working through it also exposed a flaw in my metric: “sessions after engaging with Spotlight” couldn’t be measured in the holdout and was biased toward users who self-selected into clicking. So I changed the primary metric to all Wanderer sessions, treatment vs. holdout, and moved Spotlight engagement to a diagnostic. It also changed my test design: my guardrail was about Power Users, so they had to be in the test too.
